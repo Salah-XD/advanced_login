@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CodePen - Login Register Popup Template</title>
+	<title>LoginPopup: Login Register Popup Template</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./otp.css">
+	<link rel="stylesheet" href="./country.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<main>
+
+
+		<div class="lrpopup">
+			<div class="lrpopupinner">
+				<div class="lrpopupcontent">
+
+					<a href="javascript:void();" class="close_lrpopup"><span class="fa-solid fa-times"></span></a>
+
+					<div class="lrblockwrap">
+
+
+						<div class="loginblock lrblock">
+							<h3>Login</h3>
+							<p>Enter Your Login Details Below</p>
+							<div class="formwrap">
+								<form method="post" action="#">
+									<fieldset>
+										<input type="text" name="username" placeholder="Username" autocomplete="off"
+											required>
+									</fieldset>
+									<fieldset>
+										<input type="password" name="password" placeholder="Password" autocomplete="off"
+											required>
+									</fieldset>
+									<a href="javascript:void();" class="register_btn fp">Dont have an account ? -
+										SignUp</a>
+									<button>
+										Login <span class="fa-solid fa-angle-right"></span>
+									</button>
+								</form>
+							</div>
+						</div>
+						<!--loginblock-->
+
+
+
+						<div class="registerblock lrblock" style="position: relative; height: 500px;">
+							<h3>Register</h3>
+							<p>Enter Details Below for Sign Up</p>
+							<div class="formwrap" id="reg" style="position: absolute;">
+								<form method="post" action="#">
+									<fieldset>
+										<input type="text" name="name" placeholder="Name*" autocomplete="off" required>
+									</fieldset>
+									<fieldset>
+										<input type="email" name="email" placeholder="Email Address*" autocomplete="off"
+											required>
+									</fieldset>
+									<fieldset>
+										<input type="text" name="username" placeholder="Username*" autocomplete="off"
+											required>
+									</fieldset>
+									<fieldset>
+										<input type="password" name="password" placeholder="Password" autocomplete="off"
+											required>
+									</fieldset>
+									<fieldset>
+										<input type="password" name="confirmpassword" placeholder="Confirm Password"
+											autocomplete="off" required>
+									</fieldset>
+									<a href="javascript:void();" class="login_btn fp">Already have an Account ? -
+										LogIn</a>
+									<button onclick="phno()">
+										next <span class="fa-solid fa-angle-right"></span>
+									</button>
+								</form>
+
+							</div>
+							<div class="formwrap" id="phno" style="position: absolute;left: 100%;">
+								<form method="post" action="#">
+									<fieldset>
+										<div class="pn-select" id="js_pn-select" style="--prefix-length: 2">
+											<!-- Selected prefix -->
+											<a class="pn-selected-prefix" aria-label="Select phonenumber prefix"
+												id="js_trigger-dropdown" tabindex="1">
+												<img class="pn-selected-prefix__flag" id="js_selected-flag"
+													src="https://flagpedia.net/data/flags/icon/36x27/nl.png" />
+												<!-- prettier-ignore -->
+												<svg class="pn-selected-prefix__icon" xmlns="http://www.w3.org/2000/svg"
+													width="24" height="24" viewBox="0 0 24 24" fill="none"
+													stroke="#081626" stroke-width="2" stroke-linecap="round"
+													stroke-linejoin="round">
+													<polyline points="6 9 12 15 18 9" />
+												</svg>
+											</a>
+											<!-- Phone number input -->
+											<div class="pn-input">
+												<label class="pn-input__label">Phonenumber*</label>
+												<div class="pn-input__container">
+													<input class="pn-input__prefix" value="+31" type="text"
+														name="phonenumber-prefix" id="js_number-prefix" tabindex="-1" />
+													<input class="pn-input__phonenumber" id="js_input-phonenumber"
+														type="tel" name="phonenumber" pattern="\d*" value=""
+														placeholder=" " autocomplete="nope" required max="10"
+														tabindex="0" />
+													<small class="pn-input__error">
+														This is not a valid phone number
+													</small>
+												</div>
+											</div>
+											<!-- Dropdown -->
+											<div class="pn-dropdown" id="js_dropdown">
+												<div class="pn-search">
+													<!-- prettier-ignore -->
+													<svg class="pn-search__icon" xmlns="http://www.w3.org/2000/svg"
+														width="24" height="24" viewBox="0 0 24 24" fill="none"
+														stroke="#103155" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round">
+														<circle cx="11" cy="11" r="8"></circle>
+														<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+													</svg>
+													<input placeholder="Search for countries"
+														class="pn-search__input search" type="search"
+														id="js_search-input" autocomplete="nope" />
+												</div>
+												<!-- Country list -->
+												<ul class="pn-list list" id="js_list"></ul>
+												<div class="pn-list-item pn-list-item--no-results" style="display: none"
+													id="js_no-results-found">
+													No results found
+												</div>
+											</div>
+										</div>
+
+									</fieldset>
+									<fieldset>
+										<div class="otp-field">
+											<input type="number" id="digit1" oninput="verifyOTP()" />
+											<input type="number" disabled id="digit2" oninput="verifyOTP()" />
+											<input type="number" disabled id="digit3" oninput="verifyOTP()" />
+											<input type="number" disabled id="digit4" oninput="verifyOTP()" />
+
+										</div>
+										<button class="btn btn-primary mb-3" style="display: none;">
+											Verify
+										</button>
+
+									</fieldset>
+
+									<fieldset>
+										<input type="password" name="confirmpassword" placeholder="Confirm Password"
+											autocomplete="off" required>
+									</fieldset>
+									<a href="javascript:void();" class="login_btn fp">Already have an Account ? -
+										LogIn</a>
+									<button>
+										Sign Up <span class="fa-solid fa-angle-right"></span>
+									</button>
+								</form>
+
+							</div>
+						</div>
+
+						<!--Registerblock-->
+					</div>
+
+					<!--lrblockwrap-->
+
+
+
+
+				</div>
+				<!--lrblockwrap-->
+
+			</div>
+
+			<!--lrpopupinner-->
+		</div>
+		<!--lrpopup-->
+
+
+
+
+		<header>
+			<div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+
+				<div class="lrbuttons">
+					<a href="javascript:void();" class="login_btn">
+						Login
+					</a>
+					<a href="javascript:void();" class="register_btn">
+						Register
+					</a>
+				</div>
+			</div>
+		</header>
+		<!--header-->
+
+
+
+
+		<!-- <div class="content">
+			<div class="container">
+				<div class="timebox"></div>
+			</div>
+		</div> -->
+		<!--content-->
+
+
+
+
+		<!-- <footer>
+					<div class="container">
+						<div class="copyright">Copyright &copy; <span id="year"></span> <a href="#">BrandName</a></div>
+					</div>
+				</footer>
+				footer -->
+
+	</main>
+	<!-- partial -->
+	<script src="./script.js"></script>
+	<script src="./otp.js"></script>
+	<script src="./country.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js'></script>
+
+
+</body>
+
+</html>
