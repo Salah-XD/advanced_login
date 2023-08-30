@@ -65,7 +65,7 @@ body {
 :root {
   --border-radius: 0.75em;
   --border-color: #c3c3c3;
-  --border-color-active: #0047a5;
+  --border-color-active: #bf8c4e;
   --dropdown-border-color: #eaeaec;
   --dropdown-trigger-background-color: #f3f5f9;
   --dropdown-trigger-hover-background-color: #e6eaf1;

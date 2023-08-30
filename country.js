@@ -175,6 +175,11 @@ const init = async (countries) => {
 
 const countries = [
   {
+    name: "India",
+    prefix: 91,
+    flag: "in",
+  },
+  {
     name: "Austria",
     prefix: 43,
     flag: "at",

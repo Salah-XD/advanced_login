@@ -206,7 +206,7 @@ a.close_lrpopup {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  transition: left ease 0.3s;
+  transition: all ease 0.3s;
 }
 .lrblock form {
   width: 300px;
