@@ -24,9 +24,9 @@ body {
   color: #081627;
 }
 
-input[type="search"],
-input[type="tel"],
-input[type="text"] {
+.pn-select input[type="search"],
+.pn-select input[type="tel"],
+.pn-select input[type="text"] {
   font-size: 1rem;
   border: 0;
   font-family: inherit;
@@ -37,27 +37,27 @@ input[type="text"] {
   width: auto;
   max-width: 100%;
 }
-input[type="search"]::-webkit-input-placeholder,
-input[type="tel"]::-webkit-input-placeholder,
-input[type="text"]::-webkit-input-placeholder {
+.pn-select input[type="search"]::-webkit-input-placeholder,
+.pn-select input[type="tel"]::-webkit-input-placeholder,
+.pn-select input[type="text"]::-webkit-input-placeholder {
   font-weight: 300;
   color: #6b7280;
 }
-input[type="search"]::-moz-placeholder,
-input[type="tel"]::-moz-placeholder,
-input[type="text"]::-moz-placeholder {
+.pn-select input[type="search"]::-moz-placeholder,
+.pn-select input[type="tel"]::-moz-placeholder,
+.pn-select input[type="text"]::-moz-placeholder {
   font-weight: 300;
   color: #6b7280;
 }
-input[type="search"]:-ms-input-placeholder,
-input[type="tel"]:-ms-input-placeholder,
-input[type="text"]:-ms-input-placeholder {
+.pn-select input[type="search"]:-ms-input-placeholder,
+.pn-select input[type="tel"]:-ms-input-placeholder,
+.pn-select input[type="text"]:-ms-input-placeholder {
   font-weight: 300;
   color: #6b7280;
 }
-input[type="search"]:-moz-placeholder,
-input[type="tel"]:-moz-placeholder,
-input[type="text"]:-moz-placeholder {
+.pn-select input[type="search"]:-moz-placeholder,
+.pn-select input[type="tel"]:-moz-placeholder,
+.pn-select input[type="text"]:-moz-placeholder {
   font-weight: 300;
   color: #6b7280;
 }
