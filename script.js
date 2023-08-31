@@ -22,6 +22,6 @@ $(document).ready(function () {
 let x = document.getElementById("reg");
 let y = document.getElementById("phno");
 function phno() {
-  x.style.left = "-100%";
-  y.style.left = "0%";
+  x.style.left = "-120%";
+  y.style.left = "-0%";
 }
